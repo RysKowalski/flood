@@ -46,40 +46,96 @@ class Flood:
                 self.neighbors[x][y] = count
 
     def draw(self) -> str:
+        cells = self.cells
+        if not cells:
+            return ""
+
+        width: int = max(len(row) for row in cells)
+        horizontal: str = "+" + "-----+" * width
+
+        lines: list[str] = []
+        lines.append(horizontal)
+
+        for row in cells:
+            row_len = len(row)
+
+            parts: list[str] = ["|"]
+
+            # process existing cells
+            for i in range(row_len):
+                cell = row[i]
+
+                val = cell.value
+                text = f"{val:5.1f}"
+
+                parts.append(text)
+                parts.append("|")
+
+            # pad remaining cells without creating new Cell objects
+            for _ in range(width - row_len):
+                parts.append(f"{0.0:5.1f}")
+                parts.append("|")
+
+            lines.append("".join(parts))
+            lines.append(horizontal)
+
+        return "\n".join(lines)
+
+    def draw_color(self) -> str:
         """Return a string representation of the float grid with borders (1 decimal place) and colored cells based on CellType."""
-        if not self.cells:
+        cells = self.cells
+        if not cells:
             return ""
 
         RESET: str = "\033[0m"
 
-        width: int = max(len(row) for row in self.cells)
+        rgb = self._rgb
+        WALL_COLOR: str = rgb(0, 255, 0)
+        GENERATOR_COLOR: str = rgb(160, 160, 0)
+        BLUE_COLOR: str = rgb(0, 0, 255)
 
+        width: int = max(len(row) for row in cells)
         horizontal: str = "+" + "-----+" * width
-        lines: list[str] = [horizontal]
 
-        for row in self.cells:
-            padded_row: list[Cell] = row + [Cell(CellType.NOTHING, 0.0)] * (
-                width - len(row)
-            )
+        lines: list[str] = []
+        lines.append(horizontal)
 
-            formatted_cells: list[str] = []
-            for cell in padded_row:
-                text: str = f"{cell.value:5.1f}"
+        for row in cells:
+            row_len = len(row)
 
-                color: str = ""
-                match cell.type:
-                    case CellType.WALL:
-                        color = self._rgb(0, 255, 0)
-                    case CellType.GENERATOR:
-                        color = self._rgb(160, 160, 0)
-                    case CellType.NOTHING:
-                        if cell.value > 0.05:
-                            color = self._rgb(0, 0, 255)
+            parts: list[str] = ["|"]
 
-                formatted_cells.append(f"{color}{text}{RESET}")
+            # process existing cells
+            for i in range(row_len):
+                cell = row[i]
 
-            line: str = "|" + "|".join(formatted_cells) + "|"
-            lines.append(line)
+                val = cell.value
+                text = f"{val:5.1f}"
+
+                t = cell.type
+                if t is CellType.WALL:
+                    parts.append(WALL_COLOR)
+                    parts.append(text)
+                    parts.append(RESET)
+                elif t is CellType.GENERATOR:
+                    parts.append(GENERATOR_COLOR)
+                    parts.append(text)
+                    parts.append(RESET)
+                elif t is CellType.NOTHING and val > 0.05:
+                    parts.append(BLUE_COLOR)
+                    parts.append(text)
+                    parts.append(RESET)
+                else:
+                    parts.append(text)
+
+                parts.append("|")
+
+            # pad remaining cells without creating new Cell objects
+            for _ in range(width - row_len):
+                parts.append(f"{0.0:5.1f}")
+                parts.append("|")
+
+            lines.append("".join(parts))
             lines.append(horizontal)
 
         return "\n".join(lines)
@@ -173,19 +229,10 @@ if __name__ == "__main__":
 
     flood: Flood = Flood((1, 1), get_grid("mindustry_to_grid/testSquare.msav"))
     try:
-        while True:
+        for i in range(5):
             print(flood.draw())
             print()
-            flood.tick()
-            flood.tick()
-            flood.tick()
-            flood.tick()
-            flood.tick()
-            flood.tick()
-            flood.tick()
-            flood.tick()
-            flood.tick()
-            flood.tick()
-            flood.tick()
+            for _ in range(100):
+                flood.tick()
     except KeyboardInterrupt:
         exit()
