@@ -226,5 +226,5 @@ def save_pickle(data: SaveData, output_path: str) -> None:
 # -------------------------
 
 if __name__ == "__main__":
-    parsed = parse_save("./testSaveSmall.msav")
+    parsed = parse_save("./floors.msav")
     save_pickle(parsed, "./parsed_map.pickle")

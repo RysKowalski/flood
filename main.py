@@ -170,9 +170,9 @@ class Flood:
 
 if __name__ == "__main__":
     import time
-    from grid_builder_gui import tui
+    from grid_builder_tui import tui
 
-    flood: Flood = Flood((1, 1), tui(20, 20))
+    flood: Flood = Flood((1, 1), tui(10, 10))
     try:
         while True:
             print(flood.draw())
