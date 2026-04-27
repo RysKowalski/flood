@@ -229,10 +229,9 @@ if __name__ == "__main__":
 
     flood: Flood = Flood((1, 1), get_grid("mindustry_to_grid/testSquare.msav"))
     try:
-        for i in range(5):
-            print(flood.draw())
+        for i in range(10):
+            print(flood.draw_color())
             print()
-            for _ in range(100):
-                flood.tick()
+            flood.tick()
     except KeyboardInterrupt:
         exit()
