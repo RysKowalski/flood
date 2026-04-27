@@ -169,15 +169,23 @@ class Flood:
 
 
 if __name__ == "__main__":
-    import time
-    from grid_builder_tui import tui
+    from mindustry_to_grid.main import get_grid
 
-    flood: Flood = Flood((1, 1), tui(10, 10))
+    flood: Flood = Flood((1, 1), get_grid("mindustry_to_grid/testSquare.msav"))
     try:
         while True:
             print(flood.draw())
             print()
             flood.tick()
-            time.sleep(0.1)
+            flood.tick()
+            flood.tick()
+            flood.tick()
+            flood.tick()
+            flood.tick()
+            flood.tick()
+            flood.tick()
+            flood.tick()
+            flood.tick()
+            flood.tick()
     except KeyboardInterrupt:
         exit()

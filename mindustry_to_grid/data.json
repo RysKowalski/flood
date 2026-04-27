@@ -495,82 +495,7 @@
             [
                 33,
                 0,
-                255
-            ],
-            [
-                33,
-                0,
-                95
-            ],
-            [
-                133,
-                0,
-                0
-            ],
-            [
-                134,
-                0,
-                0
-            ],
-            [
-                135,
-                0,
-                0
-            ],
-            [
-                136,
-                0,
-                0
-            ],
-            [
-                137,
-                0,
-                0
-            ],
-            [
-                138,
-                0,
-                0
-            ],
-            [
-                139,
-                0,
-                0
-            ],
-            [
-                140,
-                0,
-                0
-            ],
-            [
-                141,
-                0,
-                0
-            ],
-            [
-                33,
-                0,
-                41
-            ],
-            [
-                34,
-                0,
-                0
-            ],
-            [
-                35,
-                0,
-                0
-            ],
-            [
-                36,
-                0,
-                0
-            ],
-            [
-                37,
-                0,
-                0
+                205
             ],
             [
                 38,
@@ -578,224 +503,9 @@
                 0
             ],
             [
-                39,
+                33,
                 0,
-                0
-            ],
-            [
-                40,
-                0,
-                0
-            ],
-            [
-                41,
-                0,
-                0
-            ],
-            [
-                42,
-                0,
-                0
-            ],
-            [
-                43,
-                0,
-                0
-            ],
-            [
-                44,
-                0,
-                0
-            ],
-            [
-                45,
-                0,
-                0
-            ],
-            [
-                46,
-                0,
-                0
-            ],
-            [
-                47,
-                0,
-                0
-            ],
-            [
-                48,
-                0,
-                0
-            ],
-            [
-                49,
-                0,
-                0
-            ],
-            [
-                50,
-                0,
-                0
-            ],
-            [
-                51,
-                0,
-                0
-            ],
-            [
-                52,
-                0,
-                0
-            ],
-            [
-                53,
-                0,
-                0
-            ],
-            [
-                54,
-                0,
-                0
-            ],
-            [
-                55,
-                0,
-                0
-            ],
-            [
-                56,
-                0,
-                0
-            ],
-            [
-                57,
-                0,
-                0
-            ],
-            [
-                58,
-                0,
-                0
-            ],
-            [
-                59,
-                0,
-                0
-            ],
-            [
-                60,
-                0,
-                0
-            ],
-            [
-                61,
-                0,
-                0
-            ],
-            [
-                62,
-                0,
-                0
-            ],
-            [
-                63,
-                0,
-                0
-            ],
-            [
-                64,
-                0,
-                0
-            ],
-            [
-                65,
-                0,
-                0
-            ],
-            [
-                66,
-                0,
-                0
-            ],
-            [
-                67,
-                0,
-                0
-            ],
-            [
-                68,
-                0,
-                0
-            ],
-            [
-                69,
-                0,
-                0
-            ],
-            [
-                70,
-                0,
-                0
-            ],
-            [
-                71,
-                0,
-                0
-            ],
-            [
-                72,
-                0,
-                0
-            ],
-            [
-                73,
-                0,
-                0
-            ],
-            [
-                74,
-                0,
-                0
-            ],
-            [
-                75,
-                0,
-                0
-            ],
-            [
-                76,
-                0,
-                0
-            ],
-            [
-                77,
-                0,
-                0
-            ],
-            [
-                78,
-                0,
-                0
-            ],
-            [
-                79,
-                0,
-                0
-            ],
-            [
-                130,
-                0,
-                0
-            ],
-            [
-                131,
-                0,
-                0
-            ],
-            [
-                132,
-                0,
-                0
+                244
             ]
         ],
         "blocks": [
@@ -878,18 +588,321 @@
                 "entity": false,
                 "data": null,
                 "building_revision": null,
-                "run": 255
+                "run": 53
             },
             {
-                "index": 2304,
+                "index": 2102,
+                "block_id": 156,
+                "name": "metal-wall-1",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 7
+            },
+            {
+                "index": 2110,
                 "block_id": 0,
                 "name": "stop",
                 "entity": false,
                 "data": null,
                 "building_revision": null,
-                "run": 195
+                "run": 2
+            },
+            {
+                "index": 2113,
+                "block_id": 156,
+                "name": "metal-wall-1",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2114,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 37
+            },
+            {
+                "index": 2152,
+                "block_id": 156,
+                "name": "metal-wall-1",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2153,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2154,
+                "block_id": 339,
+                "name": "core-shard",
+                "entity": true,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2155,
+                "block_id": 339,
+                "name": "core-shard",
+                "entity": true,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2156,
+                "block_id": 339,
+                "name": "core-shard",
+                "entity": true,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2157,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 5
+            },
+            {
+                "index": 2163,
+                "block_id": 156,
+                "name": "metal-wall-1",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2164,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 37
+            },
+            {
+                "index": 2202,
+                "block_id": 156,
+                "name": "metal-wall-1",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2203,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2204,
+                "block_id": 339,
+                "name": "core-shard",
+                "entity": true,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2205,
+                "block_id": 339,
+                "name": "core-shard",
+                "entity": true,
+                "data": null,
+                "building_revision": 1,
+                "run": 0
+            },
+            {
+                "index": 2206,
+                "block_id": 339,
+                "name": "core-shard",
+                "entity": true,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2207,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 5
+            },
+            {
+                "index": 2213,
+                "block_id": 156,
+                "name": "metal-wall-1",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2214,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 37
+            },
+            {
+                "index": 2252,
+                "block_id": 156,
+                "name": "metal-wall-1",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2253,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2254,
+                "block_id": 339,
+                "name": "core-shard",
+                "entity": true,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2255,
+                "block_id": 339,
+                "name": "core-shard",
+                "entity": true,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2256,
+                "block_id": 339,
+                "name": "core-shard",
+                "entity": true,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2257,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 5
+            },
+            {
+                "index": 2263,
+                "block_id": 156,
+                "name": "metal-wall-1",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2264,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 37
+            },
+            {
+                "index": 2302,
+                "block_id": 156,
+                "name": "metal-wall-1",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2303,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 9
+            },
+            {
+                "index": 2313,
+                "block_id": 156,
+                "name": "metal-wall-1",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 0
+            },
+            {
+                "index": 2314,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 37
+            },
+            {
+                "index": 2352,
+                "block_id": 156,
+                "name": "metal-wall-1",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 11
+            },
+            {
+                "index": 2364,
+                "block_id": 0,
+                "name": "stop",
+                "entity": false,
+                "data": null,
+                "building_revision": null,
+                "run": 135
             }
         ],
-        "cores": []
+        "cores": [
+            {
+                "x": 5,
+                "y": 44,
+                "type": "core-shard"
+            }
+        ]
     }
 }

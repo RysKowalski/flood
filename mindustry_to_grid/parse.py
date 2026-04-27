@@ -2,7 +2,7 @@ import io
 import struct
 import zlib
 import pickle
-from typing import BinaryIO, Any
+from typing import BinaryIO
 from dataclasses import dataclass
 from typing import Optional
 
@@ -69,7 +69,7 @@ class Block:
     entity: bool
     data: Optional[bytes] = None
     building_revision: Optional[int] = None
-    run: Optional[int] = None
+    run: int = 0
 
 
 @dataclass
@@ -226,5 +226,5 @@ def save_pickle(data: SaveData, output_path: str) -> None:
 # -------------------------
 
 if __name__ == "__main__":
-    parsed = parse_save("./floors.msav")
+    parsed = parse_save("./test.msav")
     save_pickle(parsed, "./parsed_map.pickle")
