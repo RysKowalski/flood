@@ -203,63 +203,6 @@ class Flood:
 
         return "\n".join(lines)
 
-    def draw_sixel(self) -> str:
-        cells = self.cells
-        if not cells:
-            return ""
-
-        height: int = len(cells)
-        width: int = max(len(row) for row in cells)
-
-        def get_color(cell) -> int:
-            if cell.type is CellType.WALL:
-                return 1
-            if cell.type is CellType.GENERATOR:
-                return 2
-            if cell.type is CellType.NOTHING and cell.value > 0.05:
-                return 3
-            return 0
-
-        # Build indexed grid
-        grid: list[list[int]] = []
-        for y in range(height):
-            row = cells[y]
-            grid.append(
-                [get_color(row[x]) if x < len(row) else 0 for x in range(width)]
-            )
-
-        out: list[str] = []
-        out.append("\x1bPq")
-
-        # palette
-        out.append("#0;2;0;0;0")
-        out.append("#1;2;0;255;0")
-        out.append("#2;2;160;160;0")
-        out.append("#3;2;0;0;255")
-
-        for y0 in range(0, height, 6):
-            band = grid[y0 : y0 + 6]
-
-            for x in range(width):
-                # group by color
-                buckets: dict[int, int] = {}
-
-                for bit in range(6):
-                    if bit >= len(band):
-                        continue
-                    color = band[bit][x]
-                    buckets[color] = buckets.get(color, 0) | (1 << bit)
-
-                for color, bits in buckets.items():
-                    out.append(f"#{color}")
-                    out.append(chr(0x3F + bits))
-
-                out.append("$")
-            out.append("-")
-
-        out.append("\x1b\\")
-        return "".join(out)
-
     def draw_kitty(self) -> str:
         """
         Render the cell grid as a Kitty graphics protocol image string.
@@ -312,7 +255,7 @@ class Flood:
         for x in range(width):
             for y in range(height):
                 if self.cells[x][y].type == CellType.GENERATOR:
-                    self.cells[x][y].value += 10
+                    self.cells[x][y].value += 50
 
     def _tick_voids(self) -> None:
         width, height = self.size
